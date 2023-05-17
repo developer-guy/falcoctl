@@ -132,6 +132,6 @@ jobs:
       # This is an output of the docker/build-push-action
       # See: https://github.com/slsa-framework/slsa-verifier#toctou-attacks
       digest: ${{ needs.docker-image.outputs.digest }}
-      registry-username: developerguy
     secrets:
+      registry-username: ${{ secrets.DOCKERHUB_USER }}
       registry-password: ${{ secrets.DOCKERHUB_SECRET }}
